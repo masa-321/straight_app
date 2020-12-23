@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'sound_button.dart';
+//import 'sound_button.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -10,34 +10,46 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SoundButton(),
-              SoundButton(),
-              SoundButton(),
-            ],
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _soundButton(),
+                _soundButton(),
+                _soundButton(),
+              ],
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SoundButton(),
-              SoundButton(),
-              SoundButton(),
-            ],
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _soundButton(),
+                _soundButton(),
+                _soundButton(),
+              ],
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SoundButton(),
-              SoundButton(),
-              SoundButton(),
-            ],
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _soundButton(),
+                _soundButton(),
+                _soundButton(),
+              ],
+            ),
           ),
         ],
       ),
     );
+  }
+
+  Widget _soundButton() {
+    return Expanded(child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: RaisedButton(),
+    ));
   }
 }
