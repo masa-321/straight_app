@@ -9,39 +9,40 @@ class HomeScreen extends StatelessWidget {
         title: Text("つっこみマシーン"),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                _soundButton(),
-                _soundButton(),
-                _soundButton(),
-              ],
+      body: Container(
+        padding: EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Expanded(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  _soundButton(),
+                  _soundButton(),
+                  //_soundButton(),
+                ],
+              ),
             ),
-          ),
-          Expanded(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                _soundButton(),
-                _soundButton(),
-                _soundButton(),
-              ],
+            Expanded(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  _soundButton(),
+                  _soundButton(),
+                ],
+              ),
             ),
-          ),
-          Expanded(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                _soundButton(),
-                _soundButton(),
-                _soundButton(),
-              ],
+            Expanded(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  _soundButton(),
+                  _soundButton(),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
